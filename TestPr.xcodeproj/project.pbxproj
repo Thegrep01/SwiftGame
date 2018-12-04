@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F1CDD62421B7155600B84944 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CDD62321B7155600B84944 /* InfoViewController.swift */; };
+		F1CDD62A21B72B5900B84944 /* BullsEye.html in Resources */ = {isa = PBXBuildFile; fileRef = F1CDD62921B72B5900B84944 /* BullsEye.html */; };
+		F1CDD62C21B72EA600B84944 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CDD62B21B72EA600B84944 /* MenuViewController.swift */; };
 		F1CE414E21B459A400AE5E57 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CE414D21B459A400AE5E57 /* AppDelegate.swift */; };
 		F1CE415021B459A400AE5E57 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CE414F21B459A400AE5E57 /* ViewController.swift */; };
 		F1CE415321B459A400AE5E57 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1CE415121B459A400AE5E57 /* Main.storyboard */; };
@@ -15,6 +18,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F1CDD62321B7155600B84944 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		F1CDD62921B72B5900B84944 /* BullsEye.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = BullsEye.html; sourceTree = "<group>"; };
+		F1CDD62B21B72EA600B84944 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		F1CE414A21B459A400AE5E57 /* TestPr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestPr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1CE414D21B459A400AE5E57 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F1CE414F21B459A400AE5E57 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +62,9 @@
 			children = (
 				F1CE414D21B459A400AE5E57 /* AppDelegate.swift */,
 				F1CE414F21B459A400AE5E57 /* ViewController.swift */,
+				F1CDD62B21B72EA600B84944 /* MenuViewController.swift */,
+				F1CDD62321B7155600B84944 /* InfoViewController.swift */,
+				F1CDD62921B72B5900B84944 /* BullsEye.html */,
 				F1CE415121B459A400AE5E57 /* Main.storyboard */,
 				F1CE415421B459A500AE5E57 /* Assets.xcassets */,
 				F1CE415621B459A500AE5E57 /* LaunchScreen.storyboard */,
@@ -123,6 +132,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F1CE415821B459A500AE5E57 /* LaunchScreen.storyboard in Resources */,
+				F1CDD62A21B72B5900B84944 /* BullsEye.html in Resources */,
 				F1CE415521B459A500AE5E57 /* Assets.xcassets in Resources */,
 				F1CE415321B459A400AE5E57 /* Main.storyboard in Resources */,
 			);
@@ -136,7 +146,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F1CE415021B459A400AE5E57 /* ViewController.swift in Sources */,
+				F1CDD62421B7155600B84944 /* InfoViewController.swift in Sources */,
 				F1CE414E21B459A400AE5E57 /* AppDelegate.swift in Sources */,
+				F1CDD62C21B72EA600B84944 /* MenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,14 +294,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LJMK6232CL;
 				INFOPLIST_FILE = TestPr/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.TestPr;
+				PRODUCT_BUNDLE_IDENTIFIER = com.TestPrBullsEye;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
@@ -301,14 +315,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LJMK6232CL;
 				INFOPLIST_FILE = TestPr/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.TestPr;
+				PRODUCT_BUNDLE_IDENTIFIER = com.TestPrBullsEye;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;

@@ -1,11 +1,3 @@
-//
-//  ViewController.swift
-//  TestPr
-//
-//  Created by Денис Белоцерковец on 12/2/18.
-//  Copyright © 2018 grep. All rights reserved.
-//
-
 import UIKit
 
 class ViewController: UIViewController {
@@ -23,7 +15,25 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         curValue = Int(slider.value.rounded())
-        newRound()
+        restart()
+        
+        let sliderImage = #imageLiteral(resourceName: "SliderThumb-Normal")
+        let sliderHighliteImage = #imageLiteral(resourceName: "SliderThumb-Highlighted")
+        
+        slider.setThumbImage(sliderImage, for: .normal)
+        slider.setThumbImage(sliderHighliteImage, for: .highlighted)
+        
+        let insets = UIEdgeInsets(top: 0, left: 14, bottom: 0, right: 14)
+        
+        let left = #imageLiteral(resourceName: "SliderTrackLeft")
+        let right = #imageLiteral(resourceName: "SliderTrackRight")
+        
+        let leftResize = left.resizableImage(withCapInsets: insets)
+        let rightResize = right.resizableImage(withCapInsets: insets)
+        
+        slider.setMinimumTrackImage(leftResize, for: .normal)
+        slider.setMaximumTrackImage(rightResize, for: .normal)
+
     }
 
     @IBAction func hitButton() {
@@ -50,12 +60,22 @@ class ViewController: UIViewController {
         score += points
         
         let alert = UIAlertController(title: title, message: "Your points: \(points)", preferredStyle: .alert)
-        let action = UIAlertAction(title: "Ok", style: .default, handler: nil)
+        let action = UIAlertAction(title: "Ok", style: .default, handler: {
+            action in
+            self.newRound()
+        })
 
         alert.addAction(action)
         present(alert, animated: true, completion: nil)
-        
+}
+    
+    @IBAction func restart(){
+        round = 0
+        curValue = 50
+        slider.value = Float(curValue)
+        score = 0
         newRound()
+        dismiss(animated: true, completion: nil)
     }
     
     @IBAction func handleSlider(_ slider: UISlider) {
